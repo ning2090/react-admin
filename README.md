@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React + Webpack + React Router + Ant Design + Redux Toolkit + axios + Mock.js + echarts + dayjs
 
 ## Available Scripts
 
@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# mockjs
+**概念**：使用 mockjs 来模拟接口数据通常用于前期开发阶段，后端接口尚未完成时，帮助前端自测页面展示与交互功能<br>
+**使用**：已写好axios封装的基础上
+1. `npm install mockjs --save-dev`
+2. 在开发环境引入 mock
+    ```js
+    // src/index.js
+    import './api/mock';
+    ```
+3. 注册 mock 接口
+    ```js
+    // src/api/mock.js
+    import Mock from 'mockjs'
+    import homeApi from './mockServeData/home'
+
+    // 拦截指定接口
+    Mock.mock(/home\/getData/, 'get', homeApi.getStatisticalData)
+    ```
+4. 模拟数据文件 —— src/api/mockServeData/home.js
