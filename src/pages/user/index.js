@@ -155,7 +155,7 @@ const User = () => {
                 onCancel={handleCancel}
                 okText="确定"
                 cancelText="取消"
-                bodyStyle={{ paddingTop: '10px' }}
+                styles={{ body: { paddingTop: '10px' } }}
             >
                 <Form
                     form={form}

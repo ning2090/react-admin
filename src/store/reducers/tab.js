@@ -32,9 +32,16 @@ const tabSlice = createSlice({
         closeTab: (state,{payload:val}) => {
             let res = state.tabList.findIndex(item => item.name === val.name)
             state.tabList.splice(res, 1)
+        },
+        setCurrentMenu:(state, {payload:val}) =>{
+            if(val.name === 'home'){
+                state.currentMenu = {}
+            }else{
+                state.currentMenu = val
+            }
         }
     }
 })
 
-export const { collapseMenu, selectMenuList, closeTab } = tabSlice.actions
+export const { collapseMenu, selectMenuList, closeTab, setCurrentMenu } = tabSlice.actions
 export default tabSlice.reducer
