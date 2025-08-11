@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# react-admin 通用后台管理系统
 
 React + Webpack + React Router + Ant Design + Redux Toolkit + axios + Mock.js + echarts + dayjs
 
