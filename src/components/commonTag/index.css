@@ -1,4 +1,53 @@
 .common-tag {
-    padding-top: 24px;
-    padding-left: 24px;
+    padding: 16px 24px 8px 24px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tab-tag {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-tag:hover {
+    transform: translateY(-1px);
+}
+
+.tab-tag.active {
+    background: #1890ff;
+    border-color: #1890ff;
+    color: #fff;
+}
+
+.tab-tag.active:hover {
+    background: #40a9ff;
+    border-color: #40a9ff;
+    color: #fff;
+}
+
+/* 右键菜单样式优化 */
+.ant-dropdown-menu {
+    border-radius: 6px;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ant-dropdown-menu-item {
+    padding: 5px 12px;
+}
+
+.ant-dropdown-menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .common-tag {
+        padding: 12px 16px 6px 16px;
+    }
+    
+    .tab-tag {
+        font-size: 13px;
+        padding: 4px 10px;
+        margin: 0 2px 6px 0;
+    }
 }
